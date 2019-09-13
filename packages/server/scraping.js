@@ -34,19 +34,21 @@ async function main() {
 	await axios.get(url)
 		.then(response => {
 			$('.lister-list tr', response.data).map((i, el) => {
-				const ranking = getRanking(i);
-				const name =  getName(el);
-				const image =  getImage(el);
-				const rating = getRating(el);
-				const url = getUrl(el);
-
-				api.push({
-					ranking,
-					name,
-					image,
-					rating,
-					url
-				});
+				if (i < 50) {
+					const ranking = getRanking(i);
+					const name =  getName(el);
+					const image =  getImage(el);
+					const rating = getRating(el);
+					const url = getUrl(el);
+	
+					api.push({
+						ranking,
+						name,
+						image,
+						rating,
+						url
+					});
+				}
 			});
 		})
 		.catch(err => {
