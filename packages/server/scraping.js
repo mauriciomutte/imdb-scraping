@@ -12,4 +12,11 @@ function getName(ctx) {
 	return $('.titleColumn a', ctx).text();
 }
 
+function getImage(ctx) {
+	const	imageLink = $('.posterColumn a img', ctx).attr('src');
+	const regex = /(https\:\/\/m\.media-amazon\.com\/images\/M\/\w*(@@|@))|(\.jpg)/gi;
+
+	return imageLink.match(regex).join('');
+}
+
 module.exports = api
