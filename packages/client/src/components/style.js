@@ -15,3 +15,40 @@ export const Title = styled.div`
     font-weight: 300;
   }
 `;
+
+export const Serie = styled.li`
+  align-items: center;
+  background-color: #0004;
+  border-radius: 10px;
+  display: flex;
+  margin: 10px auto;
+  max-width: 700px;
+  padding: 15px;
+  width: 95%;
+
+  * {
+    margin-right: 8px;
+  }
+`;
+
+export const Ranking = styled.span`
+  font-weight: 700;
+`;
+
+export const Image = styled.div`
+  img {
+    height: auto;
+    max-width: 70px;
+  }
+`;
+
+export const Name = styled.h3`
+  font-size: 20px;
+  text-align: left;
+  padding-right: 10px;
+`;
+
+export const Rating = styled.span`
+  font-weight: 700;
+  margin-left: auto;
+`;
