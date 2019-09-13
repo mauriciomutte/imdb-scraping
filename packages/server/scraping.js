@@ -23,4 +23,11 @@ function getRating(ctx) {
 	return +$('.imdbRating strong', ctx).text();
 }
 
+function getUrl(ctx) {
+	const fullUrl = $('.titleColumn a', ctx).attr('href');
+	const regex = /(\/title\/\w+\/)/gi;
+
+	return 'https://www.imdb.com' + fullUrl.match(regex).join('');
+}
+
 module.exports = api
