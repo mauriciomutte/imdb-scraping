@@ -19,4 +19,8 @@ function getImage(ctx) {
 	return imageLink.match(regex).join('');
 }
 
+function getRating(ctx) {
+	return +$('.imdbRating strong', ctx).text();
+}
+
 module.exports = api
