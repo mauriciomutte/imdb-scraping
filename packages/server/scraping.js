@@ -8,4 +8,8 @@ function getRanking(num) {
 	return num + 1
 }
 
+function getName(ctx) {
+	return $('.titleColumn a', ctx).text();
+}
+
 module.exports = api
