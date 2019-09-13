@@ -5,7 +5,7 @@ const url = 'https://www.imdb.com/chart/tvmeter';
 let api = [];
 
 function getRanking(num) {
-	return num + 1
+	return num + 1;
 }
 
 function getName(ctx) {
@@ -55,4 +55,4 @@ async function main() {
 }
 main();
 
-module.exports = api
+module.exports = api;
